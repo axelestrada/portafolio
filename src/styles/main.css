@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  color: #ffffff8c;
+  background: #071720;
+}
+
+/*
+    1. Navbar
+*/
+header {
+  margin: 5px;
+  border-radius: 5px;
+  background: #051118;
+  -webkit-box-shadow: 5px 5px 15px #05111880, 5px 5px 25px #05111880, -5px -5px 15px #05111840;
+          box-shadow: 5px 5px 15px #05111880, 5px 5px 25px #05111880, -5px -5px 15px #05111840;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffffd9;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
+  width: 55px;
+  height: 75px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+  color: #18e77c;
+}
+
+header nav ul li a .fa {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=main.css.map */
