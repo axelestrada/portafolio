@@ -22,8 +22,10 @@ body {
     1. Navbar
 */
 header {
-  margin: 5px;
+  position: fixed;
+  width: calc(100% - 10px);
   border-radius: 5px;
+  margin: 5px;
   background: #051118;
   -webkit-box-shadow: 5px 5px 15px #05111880, 5px 5px 25px #05111880, -5px -5px 15px #05111840;
           box-shadow: 5px 5px 15px #05111880, 5px 5px 25px #05111880, -5px -5px 15px #05111840;
