@@ -15,55 +15,44 @@ body {
 }
 
 /*
-    1. Navbar
+	1. Preloader
 */
 
-header {
-	position: fixed;
-	width: calc(100% - 10px);
-	border-radius: 5px;
-	margin: 5px;
+/*
+    2. Navbar
+*/
+
+.navbar {
+	width: calc(100% - 12px);
 	background: #051118;
 	box-shadow: 5px 5px 15px #05111880, 5px 5px 25px #05111880, -5px -5px 15px #05111840;
 
-	nav {
-		ul {
+	nav ul li {
+		a {
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: center;
 			align-items: center;
+			flex-direction: column;
+			color: #ffffffd9;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 11px;
+			font-weight: 500;
+			width: 55px;
+			height: 75px;
+			transition: 0.3s;
 
-			li {
-				list-style: none;
+			&:hover,
+			&.active {
+				color: #18e77c;
+			}
 
-				a {
-					position: relative;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					flex-direction: column;
-					color: #ffffffd9;
-					text-transform: uppercase;
-					text-decoration: none;
-					font-size: 11px;
-					font-weight: 500;
-					width: 55px;
-					height: 75px;
-					transition: 0.3s;
+			.icon {
+				font-size: 18px;
+			}
 
-					&:hover,
-					&.active {
-						color: #18e77c;
-					}
-
-					.icon {
-						font-size: 18px;
-						margin-bottom: 5px;
-					}
-
-					*{
-						pointer-events: none;
-					}
-				}
+			* {
+				pointer-events: none;
 			}
 		}
 	}

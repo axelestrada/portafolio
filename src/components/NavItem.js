@@ -7,16 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function NavItem(props) {
 	const dispatch = useDispatch();
-    const navbarDuck = useSelector(store => store);
+    const currentLink = useSelector(store => store.currentLink);
 
 	return (
-		<li>
+		<li className="list-none">
 			<a
 				href={'#' + props.href}
-				className={navbarDuck.currentLink === props.href ? 'link active' : 'link'}
+				className={currentLink === props.href ? 'active' : ''}
 				onClick={() => dispatch(setCurrentLinkAction(props.href))}
 			>
-				<FontAwesomeIcon className="icon" icon={props.icon} />
+				<FontAwesomeIcon className="icon mb-1.5" icon={props.icon} />
 				<span>{props.href}</span>
 			</a>
 		</li>

@@ -16,36 +16,19 @@ body {
 }
 
 /*
-    1. Navbar
+	1. Preloader
 */
-header {
-  position: fixed;
-  width: calc(100% - 10px);
-  border-radius: 5px;
-  margin: 5px;
+/*
+    2. Navbar
+*/
+.navbar {
+  width: calc(100% - 12px);
   background: #051118;
   -webkit-box-shadow: 5px 5px 15px #05111880, 5px 5px 25px #05111880, -5px -5px 15px #05111840;
           box-shadow: 5px 5px 15px #05111880, 5px 5px 25px #05111880, -5px -5px 15px #05111840;
 }
 
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header nav ul li {
-  list-style: none;
-}
-
-header nav ul li a {
-  position: relative;
+.navbar nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,16 +53,15 @@ header nav ul li a {
   transition: 0.3s;
 }
 
-header nav ul li a:hover, header nav ul li a.active {
+.navbar nav ul li a:hover, .navbar nav ul li a.active {
   color: #18e77c;
 }
 
-header nav ul li a .icon {
+.navbar nav ul li a .icon {
   font-size: 18px;
-  margin-bottom: 5px;
 }
 
-header nav ul li a * {
+.navbar nav ul li a * {
   pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */
