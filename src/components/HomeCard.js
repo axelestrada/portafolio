@@ -24,19 +24,19 @@ export default function HomeCard() {
 				</a>
 
 				<a target="_blank" href="https://twitter.com/" rel="noopener noreferrer">
-					<span class="fab fa-twitter"></span>
+					<span className="fab fa-twitter"></span>
 				</a>
 
 				<a target="_blank" href="https://instagram.com/" rel="noopener noreferrer">
-					<span class="fab fa-instagram"></span>
+					<span className="fab fa-instagram"></span>
 				</a>
 
 				<a target="_blank" href="https://github.com/" rel="noopener noreferrer">
-					<span class="fab fa-github"></span>
+					<span className="fab fa-github"></span>
 				</a>
 
 				<a target="_blank" href="https://stackoverflow.com/" rel="noopener noreferrer">
-					<span class="fab fa-stack-overflow"></span>
+					<span className="fab fa-stack-overflow"></span>
 				</a>
 			</div>
 
