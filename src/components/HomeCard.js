@@ -1,59 +1,50 @@
 import React from 'react';
 import profile from '../images/profile.png';
+import bg from '../images/bg.jpg';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SocialNetworkItem from './SocialNetworkItem';
+
+import { faFacebookF, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import ButtonHomeCard from './ButtonHomeCard';
 
 export default function HomeCard() {
 	return (
-		<div className="home-card" id="home-card">
-			<div className="background-image"></div>
-
-			<div className="profile-image">
-				<img src={profile} alt="Axel Estrada" />
+		<div className="home-card m-1.5 rounded mt-24 relative text-center flex justify-end items-center flex-col">
+			<div className="background-image absolute rounded overflow-hidden top-0 left-0 w-full">
+				<img className="w-full h-full object-cover" src={bg} alt="Axel Estrada" />
 			</div>
 
-			<div className="name">
-				<h1>Axel Estrada</h1>
+			<div className="profile-image absolute left-1/2 transform -translate-x-1/2 rounded-full">
+				<img className="rounded-full w-full h-full border-4 relative" src={profile} alt="Axel Estrada" />
 			</div>
 
-			<div className="occupation">
-				<h2>Software Developer</h2>
+			<div className="name mb-2.5">
+				<h1 className="text-3xl">Axel Estrada</h1>
+			</div>
+
+			<div className="occupation mb-3.5">
+				<h2>Web Developer</h2>
 			</div>
 
 			<div className="social">
-				<a href="http://facebook.com/" target="_blank" rel="noopener noreferrer">
-					<span className="fab fa-facebook-f"></span>
-				</a>
-
-				<a target="_blank" href="https://twitter.com/" rel="noopener noreferrer">
-					<span className="fab fa-twitter"></span>
-				</a>
-
-				<a target="_blank" href="https://instagram.com/" rel="noopener noreferrer">
-					<span className="fab fa-instagram"></span>
-				</a>
-
-				<a target="_blank" href="https://github.com/" rel="noopener noreferrer">
-					<span className="fab fa-github"></span>
-				</a>
-
-				<a target="_blank" href="https://stackoverflow.com/" rel="noopener noreferrer">
-					<span className="fab fa-stack-overflow"></span>
-				</a>
+				<SocialNetworkItem href="https://facebook.com/" icon={faFacebookF} />
+				<SocialNetworkItem href="https://twitter.com/" icon={faTwitter} />
+				<SocialNetworkItem href="https://github.com/" icon={faGithub} />
+				<SocialNetworkItem href="https://linkedin.com/" icon={faLinkedinIn} />
+				<SocialNetworkItem href="https://stackoverflow.com/" icon={faStackOverflow} />
 			</div>
 
-			<div className="links">
-				<a className="link" href="#download">
-					<span className="text">Download CV</span>
-					<span className="fa fa-download"></span>
-				</a>
+			<div className="links w-full relative mt-5 flex justify-center">
+				<ButtonHomeCard href="#download" text="Download CV">
+					<FontAwesomeIcon className="ml-2 text-sm" icon={faDownload} />
+				</ButtonHomeCard>
 
-				<a className="link" href="#contact">
-					<span className="text">Contact me</span>
-					<span className="arrow"></span>
-				</a>
+				<ButtonHomeCard href="#contact" text="Contact Me">
+					<span className="modern-arrow ml-2"></span>
+				</ButtonHomeCard>
 			</div>
 		</div>
 	);
 }
-
-
-// clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);

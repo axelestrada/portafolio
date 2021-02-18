@@ -5,7 +5,7 @@ import { faUser, faListAlt, faWrench, faLaptopCode, faSms } from '@fortawesome/f
 
 export default function Navbar() {
 	return (
-		<header className="navbar fixed rounded m-1.5">
+		<header className="navbar fixed top-0 left-0 rounded m-1.5">
 			<nav>
 				<ul className="flex justify-evenly items-center">
 					<NavItem href="about" icon={faUser} />
