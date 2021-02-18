@@ -14,6 +14,43 @@ body {
   background: #0d1d26;
 }
 
+div[class*='-card'] {
+  border-radius: 0.25rem;
+  background: #051118;
+  -webkit-box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
+          box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
+}
+
+div[class*='-card'] .content .title {
+  color: #ffffffda;
+}
+
+div[class*='-card'] .content .title h3 {
+  line-height: 21px;
+}
+
+div[class*='-card'] .content .title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #18e77c66, #18e77c1a);
+}
+
+div[class*='-card'] .content .title::after {
+  content: '';
+  position: absolute;
+  left: -60px;
+  bottom: -15px;
+  width: 95%;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff8c), to(transparent));
+  background: linear-gradient(to right, #ffffff8c, transparent);
+}
+
 .modern-arrow {
   position: relative;
 }
@@ -79,32 +116,14 @@ body {
 }
 
 .navbar nav ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #ffffffd9;
-  text-transform: uppercase;
-  text-decoration: none;
   font-size: 11px;
-  font-weight: 500;
   width: 55px;
   height: 75px;
-  @apply transition;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
-.navbar nav ul li a:hover, .navbar nav ul li a.active {
+.navbar nav ul li a:hover {
   color: #18e77c;
 }
 
@@ -112,18 +131,11 @@ body {
   font-size: 18px;
 }
 
-.navbar nav ul li a * {
-  pointer-events: none;
-}
-
 /*
 	3. Home Card
 */
 .home-card {
   height: 500px;
-  background: #051118;
-  -webkit-box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
-          box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
 }
 
 .home-card .background-image {

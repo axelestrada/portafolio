@@ -20,6 +20,43 @@ body {
 	background: hsl(202, 50%, 10%);
 }
 
+div[class*='-card'] {
+	border-radius: 0.25rem;
+	background: $background-color;
+	box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
+
+	.content {
+		.title {
+			color: #ffffffda;
+
+			h3 {
+				line-height: 21px;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -12px;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: linear-gradient(135deg, #18e77c66, #18e77c1a);
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: -60px;
+				bottom: -15px;
+				width: 95%;
+				height: 1px;
+				background: linear-gradient(to right, #ffffff8c, transparent);
+			}
+		}
+	}
+}
+
 .modern-arrow {
 	position: relative;
 
@@ -85,31 +122,17 @@ body {
 
 	nav ul li {
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			color: #ffffffd9;
-			text-transform: uppercase;
-			text-decoration: none;
 			font-size: 11px;
-			font-weight: 500;
 			width: 55px;
 			height: 75px;
-			@apply transition;
 			transition-duration: 0.3s;
 
-			&:hover,
-			&.active {
+			&:hover {
 				color: $main-color;
 			}
 
 			.icon {
 				font-size: 18px;
-			}
-
-			* {
-				pointer-events: none;
 			}
 		}
 	}
@@ -121,8 +144,6 @@ body {
 
 .home-card {
 	height: 500px;
-	background: $background-color;
-	box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
 
 	.background-image {
 		height: 45%;

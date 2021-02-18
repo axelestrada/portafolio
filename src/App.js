@@ -7,6 +7,7 @@ import generateStore from './redux/store';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import HomeCard from './components/HomeCard';
+import AboutCard from "./components/AboutCard";
 
 function App() {
 	const store = generateStore();
@@ -16,6 +17,7 @@ function App() {
 			<Preloader />
 			<Navbar />
 			<HomeCard />
+			<AboutCard />
 		</Provider>
 	);
 }

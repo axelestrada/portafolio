@@ -7,11 +7,10 @@ import SocialNetworkItem from './SocialNetworkItem';
 
 import { faFacebookF, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import ButtonHomeCard from './ButtonHomeCard';
 
 export default function HomeCard() {
 	return (
-		<div className="home-card m-1.5 rounded mt-24 relative text-center flex justify-end items-center flex-col">
+		<div className="home-card m-1.5 mt-24 relative text-center flex justify-end items-center flex-col">
 			<div className="background-image absolute rounded overflow-hidden top-0 left-0 w-full">
 				<img className="w-full h-full object-cover" src={bg} alt="Axel Estrada" />
 			</div>
@@ -37,14 +36,23 @@ export default function HomeCard() {
 			</div>
 
 			<div className="links w-full relative mt-5 flex justify-center">
-				<ButtonHomeCard href="#download" text="Download CV">
+				<DownButton href="#download" text="Download CV">
 					<FontAwesomeIcon className="ml-2 text-sm" icon={faDownload} />
-				</ButtonHomeCard>
+				</DownButton>
 
-				<ButtonHomeCard href="#contact" text="Contact Me">
+				<DownButton href="#contact" text="Contact Me">
 					<span className="modern-arrow ml-2"></span>
-				</ButtonHomeCard>
+				</DownButton>
 			</div>
 		</div>
+	);
+}
+
+function DownButton({ children, text, href }) {
+	return (
+		<a className="w-1/2 transition text-xs font-medium uppercase" href={href}>
+			<span>{text}</span>
+			{children}
+		</a>
 	);
 }
