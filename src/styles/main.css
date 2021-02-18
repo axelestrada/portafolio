@@ -1,4 +1,7 @@
 /*
+	Colors
+*/
+/*
 	1. General
 */
 body {
@@ -8,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   color: #ffffff8c;
-  background: #071720;
+  background: #0d1d26;
 }
 
 .modern-arrow {
@@ -40,12 +43,8 @@ body {
   background: #051118;
   z-index: 1000;
   opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.preloader.hide {
-  opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   pointer-events: none;
 }
 
@@ -216,6 +215,11 @@ body {
 
 .home-card .links a:hover {
   color: #18e77c;
+}
+
+.home-card .links a:hover .modern-arrow,
+.home-card .links a:hover .modern-arrow::before {
+  background: #18e77c;
 }
 
 /*

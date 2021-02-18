@@ -1,4 +1,11 @@
 /*
+	Colors
+*/
+
+$background-color: #051118;
+$main-color: #18e77c;
+
+/*
 	1. General
 */
 
@@ -10,7 +17,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	color: #ffffff8c;
-	background: #071720;
+	background: hsl(202, 50%, 10%);
 }
 
 .modern-arrow {
@@ -40,15 +47,11 @@ body {
 */
 
 .preloader {
-	background: #051118;
+	background: $background-color;
 	z-index: 1000;
 	opacity: 1;
-	transition: 1s;
-
-	&.hide {
-		opacity: 0;
-		pointer-events: none;
-	}
+	transition-duration: 1s;
+	pointer-events: none;
 
 	.spinner {
 		& > [class^='double'] {
@@ -59,7 +62,7 @@ body {
 			height: 100%;
 			border-radius: 50%;
 			opacity: 1;
-			background: #18e77c;
+			background: $main-color;
 			animation: sk-bounce 2s infinite ease-in-out;
 		}
 
@@ -77,7 +80,7 @@ body {
 .navbar {
 	z-index: 900;
 	width: calc(100% - 12px);
-	background: #051118;
+	background: $background-color;
 	box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
 
 	nav ul li {
@@ -98,7 +101,7 @@ body {
 
 			&:hover,
 			&.active {
-				color: #18e77c;
+				color: $main-color;
 			}
 
 			.icon {
@@ -118,7 +121,7 @@ body {
 
 .home-card {
 	height: 500px;
-	background: #051118;
+	background: $background-color;
 	box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
 
 	.background-image {
@@ -136,7 +139,7 @@ body {
 		height: 125px;
 
 		img {
-			border-color: #051118;
+			border-color: $background-color;
 		}
 
 		&::before {
@@ -161,7 +164,7 @@ body {
 
 	.occupation {
 		h2 {
-			color: #18e77c;
+			color: $main-color;
 		}
 	}
 
@@ -205,7 +208,12 @@ body {
 			transition-duration: 0.3s;
 
 			&:hover {
-				color: #18e77c;
+				color: $main-color;
+
+				.modern-arrow,
+				.modern-arrow::before {
+					background: $main-color;
+				}
 			}
 		}
 	}
