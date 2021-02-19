@@ -8,6 +8,10 @@ $main-color: #18e77c;
 /*
 	1. General
 */
+body,
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
@@ -255,7 +259,7 @@ div[class*='-card'] {
 */
 
 .about-card {
-	:last-child{
+	:last-child {
 		margin-bottom: 0;
 	}
 
@@ -264,11 +268,11 @@ div[class*='-card'] {
 	}
 
 	.service {
-		&:last-child::before{
+		&:last-child::before {
 			display: none;
 		}
 
-		&::before{
+		&::before {
 			content: '';
 			position: absolute;
 			bottom: 0;

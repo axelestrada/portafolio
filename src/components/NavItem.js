@@ -5,9 +5,17 @@ import { setCurrentLinkAction } from '../redux/NavbarDuck';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function NavItem({href, icon}) {
+export default function NavItem({ href, icon }) {
 	const dispatch = useDispatch();
-    const currentLink = useSelector(store => store.currentLink);
+	const currentLink = useSelector((store) => store.currentLink);
+
+	const click = (e) => {
+		e.preventDefault();
+		dispatch(setCurrentLinkAction(href));
+
+		const offset = document.getElementById(href).offsetTop;
+		window.scrollTo(0, offset - 90);
+	};
 
 	return (
 		<li className="list-none">
@@ -15,7 +23,7 @@ export default function NavItem({href, icon}) {
 				href={'#' + href}
 				className="flex justify-center items-center flex-col uppercase font-medium transition"
 				style={{ color: currentLink === href ? '#18e77c' : '#ffffffd9' }}
-				onClick={() => dispatch(setCurrentLinkAction(href))}
+				onClick={click}
 			>
 				<FontAwesomeIcon className="icon mb-1.5" icon={icon} />
 				<span>{href}</span>
