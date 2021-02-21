@@ -242,6 +242,19 @@ div[class*='-card'] {
 }
 
 /*
+	Skills
+*/
+
+.skills-card {
+	.skill-circle {
+		.progress-ring__circle {
+			transform: rotate(-90deg);
+			transform-origin: 50% 50%;
+			stroke-dasharray: 245.044 245.044;
+		}
+	}
+}
+/*
 	*. Animations
 */
 

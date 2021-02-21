@@ -236,6 +236,17 @@ div[class*='-card'] .card-content .content::before {
 }
 
 /*
+	Skills
+*/
+.skills-card .skill-circle .progress-ring__circle {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  stroke-dasharray: 245.044 245.044;
+}
+
+/*
 	*. Animations
 */
 @-webkit-keyframes sk-bounce {

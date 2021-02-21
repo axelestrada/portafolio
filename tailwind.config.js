@@ -7,6 +7,7 @@ module.exports = {
 			white85: '#ffffffd9',
 			greenMain: '#18e77c',
 			backgroundMain: '#051118',
+			backgroundSecondary: '#0d1d26',
 		},
 		fontSize: {
 			uxs: '0.6875rem',
@@ -23,6 +24,7 @@ module.exports = {
 			'5xl': '3rem',
 			'6xl': '4rem',
 			'7xl': '5rem',
+			'8xl': '5.625rem',
 		},
 		extend: {},
 	},

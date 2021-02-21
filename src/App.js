@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import HomeCard from './components/HomeCard';
 import AboutCard from "./components/AboutCard";
 import ServicesCard from "./components/ServicesCard";
+import SkillsCard from "./components/SkillsCard";
 
 function App() {
 	const store = generateStore();
@@ -20,6 +21,7 @@ function App() {
 			<HomeCard />
 			<AboutCard />
 			<ServicesCard />
+			<SkillsCard />
 		</Provider>
 	);
 }

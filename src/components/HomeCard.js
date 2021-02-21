@@ -3,8 +3,6 @@ import profile from '../images/profile.png';
 import bg from '../images/bg.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SocialNetworkItem from './SocialNetworkItem';
-
 import { faFacebookF, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,7 +14,11 @@ export default function HomeCard() {
 			</div>
 
 			<div className="profile-image absolute left-1/2 transform -translate-x-1/2 rounded-full">
-				<img className="rounded-full w-full h-full border-backgroundMain border-4 relative" src={profile} alt="Axel Estrada" />
+				<img
+					className="rounded-full w-full h-full border-backgroundMain border-4 relative"
+					src={profile}
+					alt="Axel Estrada"
+				/>
 			</div>
 
 			<div className="name mb-2.5 text-white85">
@@ -53,6 +55,19 @@ function DownButton({ children, text, href }) {
 		<a className="w-1/2 transition text-xs font-medium uppercase text-white85" href={href}>
 			<span>{text}</span>
 			{children}
+		</a>
+	);
+}
+
+function SocialNetworkItem({ href, icon }) {
+	return (
+		<a
+			className="inline-block w-4 h-4 mr-1.5 ml-1.5 hover:text-white85"
+			href={href}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<FontAwesomeIcon className="icon text-base" icon={icon} />
 		</a>
 	);
 }
