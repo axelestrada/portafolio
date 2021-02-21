@@ -10,7 +10,7 @@ export default function Preloader() {
 
 	return (
 		<div
-			className="preloader fixed top-0 left-0 w-full h-full flex justify-center items-center transition"
+			className="preloader fixed top-0 left-0 w-full h-full bg-backgroundMain flex justify-center items-center transition"
 			style={preloaderStyle}
 		>
 			<div className="spinner relative w-10 h-10 inline-block">

@@ -2,7 +2,8 @@ import React from 'react';
 import CardContent from './CardContent';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faMusic, faGamepad, faBullhorn } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faMobileAlt, faHeadset } from '@fortawesome/free-solid-svg-icons';
+import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
 
 export default function AboutCard() {
 	return (
@@ -10,7 +11,7 @@ export default function AboutCard() {
 			<CardContent title="About Me">
 				<div className="content relative">
 					<div className="pt-5 pb-5 font-medium">
-						<p>
+						<p className="">
 							I am Axel Estrada, web developer from Tegucigalpa, Honduras and currently i am studying computer
 							engineering. I have experience in development of websites an web applications using frameworks like React,
 							Vue and Angular. also i am good in Node.js, PHP and MySql. I would love to talk if you have any project in
@@ -38,19 +39,22 @@ export default function AboutCard() {
 				<div className="content relative">
 					<div className="flex flex-wrap">
 						<Service icon={faCode} name="Web Development">
-							Modern and mobile-ready website that will help you reach all of your potential customers.
+							Modern website that can help you get new customers and thus generate a greater number of sales.
 						</Service>
 
-						<Service icon={faMusic} name="Music Writing">
-							Music copying, transcription, arranging and composition services
+						<Service icon={faSearchengin} name="Seo Optimization">
+							You have a website but you do not get the expected number of visitors, we optimize your website so that it
+							appears in the first google results.
 						</Service>
 
-						<Service icon={faBullhorn} name="Advertising">
-							Advertising services include television, radio, print, mail and web.
+						<Service icon={faMobileAlt} name="Mobile Development">
+							Attracts the attention of many more potential customers with a mobile application that reflects your
+							potential and superiority over the competition.
 						</Service>
 
-						<Service icon={faGamepad} name="Game Development">
-							Developing memorable and unique mobile android, ios games.
+						<Service icon={faHeadset} name="Customer Support">
+							Support to all our clients to clear each of their doubts and be able to make a better decision about what
+							they really need.
 						</Service>
 					</div>
 				</div>
@@ -62,7 +66,7 @@ export default function AboutCard() {
 function InfoItem({ title, value }) {
 	return (
 		<li className="font-medium">
-			<span className="font-semibold uppercase">{title + ' . . . . '}</span>
+			<span className="font-semibold uppercase text-white85">{title + ' . . . . '}</span>
 			{value}
 		</li>
 	);
@@ -72,10 +76,10 @@ function Service({ children, icon, name }) {
 	return (
 		<div className="service w-full flex justify-center flex-col pt-5 pb-5 relative">
 			<div className="icon w-16 h-16 flex justify-center items-center rounded-full">
-				<FontAwesomeIcon className="text-3xl" icon={icon} />
+				<FontAwesomeIcon className="text-3xl text-greenMain" icon={icon} />
 			</div>
 
-			<h4 className="name mt-4 mb-2 font-medium uppercase">{name}</h4>
+			<h4 className="name mt-4 mb-2 font-medium uppercase text-usm text-white85">{name}</h4>
 
 			<p>{children}</p>
 		</div>

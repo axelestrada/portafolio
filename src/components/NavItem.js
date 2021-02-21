@@ -21,11 +21,11 @@ export default function NavItem({ href, icon }) {
 		<li className="list-none">
 			<a
 				href={'#' + href}
-				className="flex justify-center items-center flex-col uppercase font-medium transition"
+				className="flex hover:text-greenMain text-uxs justify-center items-center flex-col uppercase font-medium transition"
 				style={{ color: currentLink === href ? '#18e77c' : '#ffffffd9' }}
 				onClick={click}
 			>
-				<FontAwesomeIcon className="icon mb-1.5" icon={icon} />
+				<FontAwesomeIcon className="mb-1.5 text-lg" icon={icon} />
 				<span>{href}</span>
 			</a>
 		</li>

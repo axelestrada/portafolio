@@ -16,15 +16,15 @@ export default function HomeCard() {
 			</div>
 
 			<div className="profile-image absolute left-1/2 transform -translate-x-1/2 rounded-full">
-				<img className="rounded-full w-full h-full border-4 relative" src={profile} alt="Axel Estrada" />
+				<img className="rounded-full w-full h-full border-backgroundMain border-4 relative" src={profile} alt="Axel Estrada" />
 			</div>
 
-			<div className="name mb-2.5">
+			<div className="name mb-2.5 text-white85">
 				<h1 className="text-3xl">Axel Estrada</h1>
 			</div>
 
-			<div className="occupation mb-3.5">
-				<h2>Web Developer</h2>
+			<div className="mb-3.5">
+				<h2 className="text-greenMain">Web Developer</h2>
 			</div>
 
 			<div className="social">
@@ -50,7 +50,7 @@ export default function HomeCard() {
 
 function DownButton({ children, text, href }) {
 	return (
-		<a className="w-1/2 transition text-xs font-medium uppercase" href={href}>
+		<a className="w-1/2 transition text-xs font-medium uppercase text-white85" href={href}>
 			<span>{text}</span>
 			{children}
 		</a>
