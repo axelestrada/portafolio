@@ -214,21 +214,13 @@ div[class*='-card'] .card-content .content::before {
 }
 
 /*
-	About Card
+	Services Card
 */
-.about-card .card-content {
-  margin-bottom: 56px;
-}
-
-.about-card :last-child {
-  margin-bottom: 0;
-}
-
-.about-card .service:last-child::before {
+.services-card .service:last-child::before {
   display: none;
 }
 
-.about-card .service::before {
+.services-card .service::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -239,26 +231,8 @@ div[class*='-card'] .card-content .content::before {
   background: linear-gradient(to right, #ffffff66, transparent);
 }
 
-.about-card .service .icon {
+.services-card .service .icon {
   background: linear-gradient(135deg, #18e77c66, #18e77c1a);
-}
-
-/*
-	Education Card
-*/
-.education-card .education-item:last-child::before {
-  display: none;
-}
-
-.education-card .education-item::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: -16px;
-  width: 100%;
-  height: 1px;
-  background: -webkit-gradient(linear, left top, right top, from(#ffffff66), to(transparent));
-  background: linear-gradient(to right, #ffffff66, transparent);
 }
 
 /*

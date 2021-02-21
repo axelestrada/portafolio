@@ -13,8 +13,39 @@ export default function NavItem({ href, icon }) {
 		e.preventDefault();
 		dispatch(setCurrentLinkAction(href));
 
-		const offset = document.getElementById(href).offsetTop;
-		window.scrollTo(0, offset - 90);
+		const dataTarget = document.getElementById(href);
+		const startLocation = window.pageYOffset;
+		const endLocation = dataTarget.offsetTop - 90;
+		const distance = endLocation - startLocation;
+		let increments = distance / 500;
+
+		if (distance >= 0) {
+			if(increments < 1){
+				increments = 1;
+			}
+		}else{
+			if (increments > -1) {
+				increments = -1;
+			}
+		}
+
+		console.log(increments);
+
+		let inter = setInterval(() => {
+			if (distance >= 0) {
+				if (window.pageYOffset >= dataTarget.offsetTop - 90) {
+					clearInterval(inter);
+				}
+
+				window.scrollBy(0, increments);
+			} else {
+				if (window.pageYOffset <= dataTarget.offsetTop - 90) {
+					clearInterval(inter);
+				}
+
+				window.scrollBy(0, increments);
+			}
+		}, 1);
 	};
 
 	return (

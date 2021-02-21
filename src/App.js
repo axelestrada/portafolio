@@ -8,7 +8,7 @@ import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import HomeCard from './components/HomeCard';
 import AboutCard from "./components/AboutCard";
-import EducationCard from "./components/EducationCard";
+import ServicesCard from "./components/ServicesCard";
 
 function App() {
 	const store = generateStore();
@@ -19,7 +19,7 @@ function App() {
 			<Navbar />
 			<HomeCard />
 			<AboutCard />
-			<EducationCard />
+			<ServicesCard />
 		</Provider>
 	);
 }

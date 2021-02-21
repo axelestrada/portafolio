@@ -1,7 +1,7 @@
 import React from 'react';
 import NavItem from './NavItem';
 
-import { faUser, faWrench, faLaptopCode, faSms, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faTools, faLaptopCode, faSms, faCog } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
 	return (
@@ -9,8 +9,8 @@ export default function Navbar() {
 			<nav>
 				<ul className="flex justify-evenly items-center">
 					<NavItem href="about" icon={faUser} />
-					<NavItem href="education" icon={faGraduationCap} />
-					<NavItem href="skills" icon={faWrench} />
+					<NavItem href="services" icon={faCog} />
+					<NavItem href="skills" icon={faTools} />
 					<NavItem href="works" icon={faLaptopCode} />
 					<NavItem href="contact" icon={faSms} />
 				</ul>
