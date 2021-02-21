@@ -19,7 +19,7 @@ export default function NavItem({ href, icon }) {
 			const startLocation = window.pageYOffset;
 			const endLocation = dataTarget.offsetTop - 90;
 			const distance = endLocation - startLocation;
-			let increments = distance / 200;
+			let increments = distance / 500;
 
 			if (distance >= 0) {
 				if (increments < 1) {

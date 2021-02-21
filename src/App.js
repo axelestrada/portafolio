@@ -10,6 +10,7 @@ import HomeCard from './components/HomeCard';
 import AboutCard from "./components/AboutCard";
 import ServicesCard from "./components/ServicesCard";
 import SkillsCard from "./components/SkillsCard";
+import WorksCard from "./components/WorksCard";
 
 function App() {
 	const store = generateStore();
@@ -22,6 +23,7 @@ function App() {
 			<AboutCard />
 			<ServicesCard />
 			<SkillsCard />
+			<WorksCard />
 		</Provider>
 	);
 }

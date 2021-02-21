@@ -70,14 +70,14 @@ function SkillCircleItem({ name, progress }) {
 	return (
 		<li className="skill-circle text-base font-medium text-white85 w-1/2 flex justify-center items-center flex-col pt-5 pb-5">
 			<div className="relative pb-2">
-				<svg class="progress-ring" height="90" width="90">
-					<circle stroke="#0d1d26" stroke-width="8" fill="transparent" r="39" cx="45" cy="45" />
+				<svg className="progress-ring" height="90" width="90">
+					<circle stroke="#0d1d26" strokeWidth="8" fill="transparent" r="39" cx="45" cy="45" />
 					<circle
-						class="progress-ring__circle"
+						className="progress-ring__circle"
 						stroke="#18e77c"
-						stroke-width="8"
-                        stroke-dashoffset={dashOffset}
-						stroke-linecap="round"
+						strokeWidth="8"
+                        strokeDashoffset={dashOffset}
+						strokeLinecap="round"
 						fill="transparent"
 						r="39"
 						cx="45"
