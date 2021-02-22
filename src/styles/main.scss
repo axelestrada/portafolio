@@ -1,8 +1,4 @@
 /*
-	Colors
-*/
-
-/*
 	1. General
 */
 
@@ -251,6 +247,20 @@ div[class*='-card'] {
 			transform: rotate(-90deg);
 			transform-origin: 50% 50%;
 			stroke-dasharray: 245.044 245.044;
+		}
+	}
+}
+
+/*
+	Contact Card
+*/
+
+.contact-card{
+	.card-content{
+		margin-bottom: 3rem;
+
+		&:last-child{
+			margin-bottom: 1.5rem;
 		}
 	}
 }

@@ -11,6 +11,7 @@ import AboutCard from "./components/AboutCard";
 import ServicesCard from "./components/ServicesCard";
 import SkillsCard from "./components/SkillsCard";
 import WorksCard from "./components/WorksCard";
+import ContactCard from './components/ContactCard';
 
 function App() {
 	const store = generateStore();
@@ -24,6 +25,7 @@ function App() {
 			<ServicesCard />
 			<SkillsCard />
 			<WorksCard />
+			<ContactCard />
 		</Provider>
 	);
 }

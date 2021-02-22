@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentLinkAction } from '../redux/NavbarDuck';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SmoothScrolling from './SmoothScrolling';
 
 export default function NavItem({ href, icon }) {
 	const dispatch = useDispatch();
@@ -14,37 +15,7 @@ export default function NavItem({ href, icon }) {
 		dispatch(setCurrentLinkAction(href));
 
 		const dataTarget = document.getElementById(href);
-
-		if (dataTarget) {
-			const startLocation = window.pageYOffset;
-			const endLocation = dataTarget.offsetTop - 90;
-			const distance = endLocation - startLocation;
-			let increments = distance / 500;
-
-			if (distance >= 0) {
-				if (increments < 1) {
-					increments = 1;
-				}
-			} else {
-				if (increments > -1) {
-					increments = -1;
-				}
-			}
-
-			let runAnimation = setInterval(() => {
-				if (distance >= 0) {
-					if (window.pageYOffset >= dataTarget.offsetTop - 90) {
-						clearInterval(runAnimation);
-					}
-				} else {
-					if (window.pageYOffset <= dataTarget.offsetTop - 90) {
-						clearInterval(runAnimation);
-					}
-				}
-
-				window.scrollBy(0, increments);
-			}, 1);
-		}
+		SmoothScrolling(dataTarget);
 	};
 
 	return (

@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
+import SmoothScrolling from './SmoothScrolling';
+
 export default function HomeCard() {
 	return (
 		<div className="home-card m-1.5 mt-24 relative text-center flex justify-end items-center flex-col">
@@ -42,7 +44,7 @@ export default function HomeCard() {
 					<FontAwesomeIcon className="ml-2 text-sm" icon={faDownload} />
 				</DownButton>
 
-				<DownButton href="#contact" text="Contact Me">
+				<DownButton href="contact" text="Contact Me">
 					<span className="modern-arrow ml-2"></span>
 				</DownButton>
 			</div>
@@ -51,8 +53,15 @@ export default function HomeCard() {
 }
 
 function DownButton({ children, text, href }) {
+	const click = (e) => {
+		e.preventDefault();
+
+		const dataTarget = document.getElementById(href);
+		SmoothScrolling(dataTarget);
+	};
+
 	return (
-		<a className="w-1/2 transition text-xs font-medium uppercase text-white85" href={href}>
+		<a className="w-1/2 transition text-xs font-medium uppercase text-white85" href={'#' + href} onClick={click}>
 			<span>{text}</span>
 			{children}
 		</a>
