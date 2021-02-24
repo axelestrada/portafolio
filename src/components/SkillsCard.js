@@ -6,37 +6,40 @@ import { faLaptopCode, faServer } from '@fortawesome/free-solid-svg-icons';
 
 export default function SkillsCard() {
 	return (
-		<div className="skills-card m-1.5 mt-2.5 p-7 overflow-hidden" id="skills">
+		<div className="skills-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="skills">
 			<CardContent title="My Skills">
-				<div className="content relative">
-					<div className="skills-list">
-						<SkillsTitle name="Frontend" icon={faLaptopCode} />
-						<ul>
-							<SkillListItem name="HTML5" progress="90" />
-							<SkillListItem name="SCSS / CSS3" progress="95" />
-							<SkillListItem name="Bootstrap" progress="85" />
-							<SkillListItem name="JavaScript" progress="80" />
-							<SkillListItem name="JQuery" progress="90" />
-							<SkillListItem name="React" progress="75" />
-							<SkillListItem name="Angular" progress="15" />
-							<SkillListItem name="Vue" progress="10" />
-						</ul>
+				<div className="skills flex flex-wrap items-start">
+					<div className="content relative w-full sm:w-1/2 sm:pr-3">
+						<div className="skills-list">
+							<SkillsTitle name="Frontend" icon={faLaptopCode} />
+							<ul>
+								<SkillListItem name="HTML5" progress="90" />
+								<SkillListItem name="SCSS / CSS3" progress="95" />
+								<SkillListItem name="Bootstrap" progress="85" />
+								<SkillListItem name="JavaScript" progress="80" />
+								<SkillListItem name="TypeScript" progress="10" />
+								<SkillListItem name="JQuery" progress="90" />
+								<SkillListItem name="React" progress="75" />
+								<SkillListItem name="Angular" progress="15" />
+								<SkillListItem name="Vue" progress="10" />
+							</ul>
+						</div>
 					</div>
-				</div>
 
-				<div className="content relative mt-5">
-					<div className="skills-circle">
-						<SkillsTitle name="Backend" icon={faServer} />
-						<ul className="flex flex-wrap">
-							<SkillCircleItem name="PHP" progress="70" />
-							<SkillCircleItem name="Laravel" progress="30" />
-							<SkillCircleItem name="Python" progress="20" />
-							<SkillCircleItem name="Django" progress="5" />
-							<SkillCircleItem name="MySql" progress="65" />
-							<SkillCircleItem name="NodeJs" progress="25" />
-							<SkillCircleItem name="Express" progress="15" />
-							<SkillCircleItem name="MongoDB" progress="10" />
-						</ul>
+					<div className="content relative mt-5 w-full sm:w-1/2 sm:mt-0 sm:pl-3">
+						<div className="skills-circle">
+							<SkillsTitle name="Backend" icon={faServer} />
+							<ul className="flex flex-wrap">
+								<SkillCircleItem name="PHP" progress="70" />
+								<SkillCircleItem name="Laravel" progress="30" />
+								<SkillCircleItem name="Python" progress="20" />
+								<SkillCircleItem name="Django" progress="5" />
+								<SkillCircleItem name="MySql" progress="65" />
+								<SkillCircleItem name="NodeJs" progress="25" />
+								<SkillCircleItem name="Express" progress="15" />
+								<SkillCircleItem name="MongoDB" progress="10" />
+							</ul>
+						</div>
 					</div>
 				</div>
 			</CardContent>
@@ -55,10 +58,10 @@ function SkillsTitle({ icon, name }) {
 
 function SkillListItem({ name, progress }) {
 	return (
-		<li className="skill relative pb-5 pt-5 text-white85 font-medium">
+		<li className="skill pb-5 pt-5 text-white85 font-medium">
 			<h4>{name}</h4>
-			<div className="w-full mt-1 bg-backgroundSecondary h-1.5 rounded overflow-hidden">
-				<div className="h-full bg-greenMain rounded" style={{ width: progress + '%' }}></div>
+			<div className="relative w-full mt-1 bg-backgroundSecondary h-1.5 rounded overflow-hidden">
+				<div className="absolute top-0 left-0 h-full bg-greenMain rounded" style={{ width: progress + '%' }}></div>
 			</div>
 		</li>
 	);
@@ -76,7 +79,7 @@ function SkillCircleItem({ name, progress }) {
 						className="progress-ring__circle"
 						stroke="#18e77c"
 						strokeWidth="8"
-                        strokeDashoffset={dashOffset}
+						strokeDashoffset={dashOffset}
 						strokeLinecap="round"
 						fill="transparent"
 						r="39"

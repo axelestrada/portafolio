@@ -14,6 +14,7 @@ body {
 }
 
 div[class*='-card'] {
+	width: 97%;
 	border-radius: 0.25rem;
 	background: #051118;
 	box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
@@ -118,7 +119,8 @@ div[class*='-card'] {
 
 .navbar {
 	z-index: 900;
-	width: calc(100% - 12px);
+	width: 97%;
+	transform: translateX(calc(-50% - 6px));
 	box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
 
 	nav ul li {
@@ -230,7 +232,6 @@ div[class*='-card'] {
 			height: 1px;
 			background: linear-gradient(to right, #ffffff66, transparent);
 		}
-
 		.icon {
 			background: linear-gradient(135deg, #18e77c66, #18e77c1a);
 		}
@@ -255,11 +256,11 @@ div[class*='-card'] {
 	Contact Card
 */
 
-.contact-card{
-	.card-content{
+.contact-card {
+	.card-content {
 		margin-bottom: 3rem;
 
-		&:last-child{
+		&:last-child {
 			margin-bottom: 1.5rem;
 		}
 	}
@@ -277,5 +278,53 @@ div[class*='-card'] {
 
 	50% {
 		transform: scale(1);
+	}
+}
+
+@media (min-width: 512px) {
+	.services-card {
+		.service {
+			&::before {
+				display: none;
+			}
+
+			&:nth-child(2n + 1) {
+				padding-right: 10px;
+			}
+
+			&:nth-child(2n + 2) {
+				padding-left: 10px;
+			}
+		}
+	}
+
+	.skills{
+		.content{
+			&:last-child{
+				&::before{
+					display: none;
+				}
+			}
+		}
+	}
+
+	.contact-card {
+		.card-content {
+			margin-bottom: 3rem;
+
+			&:last-child {
+				margin-bottom: 1.5rem;
+			}
+
+			.form-input{
+				&:nth-child(2n){
+					padding-left: 4px;
+				}
+
+				&:nth-child(2n + 1){
+					padding-right: 4px;
+				}
+			}
+		}
 	}
 }

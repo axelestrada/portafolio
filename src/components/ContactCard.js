@@ -3,12 +3,12 @@ import CardContent from './CardContent';
 
 export default function ContactCard() {
 	return (
-		<div className="contact-card m-1.5 mt-2.5 p-7 overflow-hidden" id="contact">
+		<div className="contact-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="contact">
 			<CardContent title="Get in Touch">
 				<div className="content relative">
 					<div className="map pt-5 pb-3">
 						<iframe
-							className="w-full h-48"
+							className="w-full h-48 sm:h-56"
 							title="map"
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1986.6107009450134!2d-87.18397834195653!3d14.22576759747105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDEzJzMyLjgiTiA4N8KwMTAnNTguNCJX!5e1!3m2!1sen!2shn!4v1613948105668!5m2!1sen!2shn"
 							style={{ border: 0 }}
@@ -17,12 +17,12 @@ export default function ContactCard() {
 					</div>
 					<div className="info">
 						<ul className="flex flex-wrap">
-							<div className="w-full">
+							<div className="w-full sm:w-1/2 pr-1">
 								<InfoItem title="Address" value="Tegucigalpa, Honduras" />
 								<InfoItem title="Email" value="axele1524@gmail.com" />
 							</div>
 
-							<div className="w-full">
+							<div className="w-full sm:w-1/2 pl-1">
 								<InfoItem title="Phone" value="+504 8897-9728" />
 								<InfoItem title="Freelance" value="Available" />
 							</div>
@@ -40,7 +40,7 @@ export default function ContactCard() {
 								<FormInput type="email" name="email" placeholder="Email Address" />
 								<FormTextarea name="message" placeholder="Your Message" />
 							</div>
-							<DownButton text="Send Message"/>
+							<DownButton text="Send Message" />
 						</form>
 					</div>
 				</div>
@@ -51,7 +51,7 @@ export default function ContactCard() {
 
 function InfoItem({ title, value }) {
 	return (
-		<li className="font-medium">
+		<li className="font-medium overflow-hidden overflow-ellipsis whitespace-nowrap">
 			<span className="font-semibold uppercase text-white85">{title + ' . . . . '}</span>
 			{value}
 		</li>
@@ -60,7 +60,7 @@ function InfoItem({ title, value }) {
 
 function FormInput({ name, placeholder, type }) {
 	return (
-		<div className="w-full pt-8">
+		<div className="form-input w-full pt-8 sm:w-1/2">
 			<input
 				className="w-full bg-backgroundMain border-b border-white66 text-white85 outline-none text-usm pb-5 focus:border-greenMain hover:border-greenMain"
 				type={type}

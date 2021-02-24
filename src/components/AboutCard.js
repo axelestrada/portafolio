@@ -3,7 +3,7 @@ import CardContent from './CardContent';
 
 export default function AboutCard() {
 	return (
-		<div className="about-card m-1.5 mt-2.5 p-7 overflow-hidden" id="about">
+		<div className="about-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="about">
 			<CardContent title="About Me">
 				<div className="content relative">
 					<div className="pt-5 pb-5 font-medium">
@@ -16,13 +16,13 @@ export default function AboutCard() {
 					</div>
 
 					<div className="info">
-						<ul className="flex flex-wrap">
-							<div className="w-full">
+						<ul className="flex flex-wrap overflow-hidden">
+							<div className="w-full sm:w-1/2">
 								<InfoItem title="Age" value="18" />
 								<InfoItem title="Residence" value="Honduras" />
 							</div>
 
-							<div className="w-full">
+							<div className="w-full sm:w-1/2">
 								<InfoItem title="Freelance" value="Available" />
 								<InfoItem title="Address" value="Tegucigalpa, Honduras" />
 							</div>
@@ -36,7 +36,7 @@ export default function AboutCard() {
 
 function InfoItem({ title, value }) {
 	return (
-		<li className="font-medium">
+		<li className="font-medium overflow-hidden overflow-ellipsis whitespace-nowrap">
 			<span className="font-semibold uppercase text-white85">{title + ' . . . . '}</span>
 			{value}
 		</li>

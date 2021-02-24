@@ -26,6 +26,11 @@ module.exports = {
 			'7xl': '5rem',
 			'8xl': '5.625rem',
 		},
+		screens: {
+			sm: '512px',
+			md: '720px',
+			lg: '1280px',
+		},
 		extend: {},
 	},
 	variants: {

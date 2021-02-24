@@ -6,10 +6,10 @@ import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
 
 export default function ServicesCard() {
 	return (
-		<div className="services-card m-1.5 mt-2.5 p-7 overflow-hidden" id="services">
+		<div className="services-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="services">
 			<CardContent title="Services">
 				<div className="content relative">
-					<div className="flex flex-wrap">
+					<div className="flex flex-wrap items-start">
 						<Service icon={faCode} name="Web Development">
 							Modern website that can help you get new customers and thus generate a greater number of sales.
 						</Service>
@@ -38,7 +38,7 @@ export default function ServicesCard() {
 
 function Service({ children, icon, name }) {
 	return (
-		<div className="service w-full flex justify-center flex-col pt-5 pb-5 relative">
+		<div className="service w-full sm:w-1/2 flex justify-center flex-col pt-5 pb-5 relative">
 			<div className="icon w-16 h-16 flex justify-center items-center rounded-full">
 				<FontAwesomeIcon className="text-3xl text-greenMain" icon={icon} />
 			</div>

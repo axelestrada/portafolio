@@ -18,14 +18,16 @@ function App() {
 
 	return (
 		<Provider store={store}>
-			<Preloader />
-			<Navbar />
-			<HomeCard />
-			<AboutCard />
-			<ServicesCard />
-			<SkillsCard />
-			<WorksCard />
-			<ContactCard />
+			<div className="flex justify-center items-center flex-col">
+				<Preloader />
+				<Navbar />
+				<HomeCard />
+				<AboutCard />
+				<ServicesCard />
+				<SkillsCard />
+				<WorksCard />
+				<ContactCard />
+			</div>
 		</Provider>
 	);
 }

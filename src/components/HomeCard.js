@@ -1,6 +1,5 @@
 import React from 'react';
 import profile from '../images/profile.png';
-import bg from '../images/bg.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -10,9 +9,13 @@ import SmoothScrolling from './SmoothScrolling';
 
 export default function HomeCard() {
 	return (
-		<div className="home-card m-1.5 mt-24 relative text-center flex justify-end items-center flex-col">
+		<div className="home-card m-1.5 mt-24 relative max-w-xl text-center flex justify-end items-center flex-col">
 			<div className="background-image absolute rounded overflow-hidden top-0 left-0 w-full">
-				<img className="w-full h-full object-cover" src={bg} alt="Axel Estrada" />
+				<img
+					className="w-full h-full object-cover"
+					src="https://myresume.icu/ryancv/images/bg.jpg"
+					alt="Axel Estrada"
+				/>
 			</div>
 
 			<div className="profile-image absolute left-1/2 transform -translate-x-1/2 rounded-full">

@@ -12,6 +12,7 @@ body {
 }
 
 div[class*='-card'] {
+  width: 97%;
   border-radius: 0.25rem;
   background: #051118;
   -webkit-box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
@@ -116,7 +117,9 @@ div[class*='-card'] .card-content .content::before {
 */
 .navbar {
   z-index: 900;
-  width: calc(100% - 12px);
+  width: 97%;
+  -webkit-transform: translateX(calc(-50% - 6px));
+          transform: translateX(calc(-50% - 6px));
   -webkit-box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
           box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
 }
@@ -277,6 +280,33 @@ div[class*='-card'] .card-content .content::before {
   50% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@media (min-width: 512px) {
+  .services-card .service::before {
+    display: none;
+  }
+  .services-card .service:nth-child(2n + 1) {
+    padding-right: 10px;
+  }
+  .services-card .service:nth-child(2n + 2) {
+    padding-left: 10px;
+  }
+  .skills .content:last-child::before {
+    display: none;
+  }
+  .contact-card .card-content {
+    margin-bottom: 3rem;
+  }
+  .contact-card .card-content:last-child {
+    margin-bottom: 1.5rem;
+  }
+  .contact-card .card-content .form-input:nth-child(2n) {
+    padding-left: 4px;
+  }
+  .contact-card .card-content .form-input:nth-child(2n + 1) {
+    padding-right: 4px;
   }
 }
 /*# sourceMappingURL=main.css.map */

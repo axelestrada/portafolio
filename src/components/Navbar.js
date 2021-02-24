@@ -5,7 +5,7 @@ import { faUser, faTools, faHammer, faSms, faCog } from '@fortawesome/free-solid
 
 export default function Navbar() {
 	return (
-		<header className="navbar fixed top-0 left-0 bg-backgroundMain rounded m-1.5">
+		<header className="navbar max-w-xl fixed top-0 left-1/2 bg-backgroundMain rounded m-1.5">
 			<nav>
 				<ul className="flex justify-evenly items-center">
 					<NavItem href="about" icon={faUser} />
