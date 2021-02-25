@@ -13,7 +13,8 @@ export default function ServicesCard() {
 				<div className="content relative">
 					<div className="flex flex-wrap items-start">
 						<Service icon={faCode} name="Web Development">
-							Modern website that can help you get new customers and thus generate a greater number of sales.
+							A website reflects the essence, values and professionalism of your company, making your clients feel
+							identified.
 						</Service>
 
 						<Service icon={faSearchengin} name="Seo Optimization">
@@ -27,8 +28,8 @@ export default function ServicesCard() {
 						</Service>
 
 						<Service icon={faHeadset} name="Customer Support">
-							Support to all our clients to clear each of their doubts and be able to make a better decision about what
-							they really need.
+							Free support to all our clients to clear each of their doubts and be able to make a better decision about
+							what they really need.
 						</Service>
 					</div>
 				</div>
@@ -36,7 +37,6 @@ export default function ServicesCard() {
 		</Card>
 	);
 }
-
 
 function Service({ children, icon, name }) {
 	return (

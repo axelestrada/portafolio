@@ -20,10 +20,10 @@ function App() {
 		<Provider store={store}>
 			<div className="flex justify-center items-center flex-col md:items-center md:h-screen">
 				<Preloader />
-				<div className="md:relative md:w-full md:pt-20 lg:w-100">
+				<div className="md:relative md:w-full md:pt-24 lg:w-100">
 					<Navbar />
 					<HomeCard />
-					<div className="info md:pl-2 bg-none md:rounded md:bg-backgroundMain md:overflow-y-scroll md:absolute md:right-1.5 md:top-1/2 md:transform md:-translate-y-1/2 md:mt-10 md:w-7/12 lg:w-99 md:h-97 lg:h-100">
+					<div id="info-cards" className="info md:pl-2 md:flex md:justify-start md:flex-col bg-none md:rounded md:bg-backgroundMain md:absolute md:right-1.5 md:top-1/2 md:transform md:-translate-y-1/2 md:mt-12 md:w-7/12 lg:w-99 md:h-97 lg:h-100">
 						<AboutCard />
 						<ServicesCard />
 						<SkillsCard />

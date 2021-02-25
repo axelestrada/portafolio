@@ -60,7 +60,7 @@ function SkillsTitle({ icon, name }) {
 function SkillListItem({ name, progress }) {
 	return (
 		<li className="skill pb-5 pt-5 text-white85 font-medium">
-			<h4>{name}</h4>
+			<h4 translate="no">{name}</h4>
 			<div className="relative w-full mt-1 bg-backgroundSecondary h-1.5 rounded overflow-hidden">
 				<div className="absolute top-0 left-0 h-full bg-greenMain rounded" style={{ width: progress + '%' }}></div>
 			</div>
@@ -92,7 +92,7 @@ function SkillCircleItem({ name, progress }) {
 					{progress + '%'}
 				</span>
 			</div>
-			<h4>{name}</h4>
+			<h4 translate="no">{name}</h4>
 		</li>
 	);
 }

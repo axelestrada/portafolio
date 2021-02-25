@@ -8,12 +8,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #0d1d26;
+	background: #18e77c;
 	border-radius: 4px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #0a171f;
+	background: #0d1d26;
 	border-radius: 4px;
 }
 
@@ -295,6 +295,17 @@ div[class*='-card'] {
 	}
 }
 
+@keyframes changeInfoCard {
+	0%,
+	100% {
+		transform: translateX(0) translateY(-50%);
+	}
+
+	50% {
+		transform: translateX(-100%) translateY(-50%);
+	}
+}
+
 @media (min-width: 512px) {
 	.services-card {
 		.service {
@@ -344,16 +355,47 @@ div[class*='-card'] {
 }
 
 @media (min-width: 870px) {
-	div[class*='-card'] {
-		box-shadow: none;
+	.hid {
+		position: absolute;
+		top: 50%;
+		transform: translate(-80px, -41%);
+		left: -50%;
+		width: 100%;
+		height: 505px;
+		background: #0d1d26;
+		z-index: 40;
 	}
 
 	.info {
 		box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840 !important;
+
+		&.animate {
+			animation: changeInfoCard 2s ease-in-out;
+		}
+
+		div[class*='-card'] {
+			box-shadow: none;
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
 	}
 }
 
 @media (min-width: 1050px) {
+	.hid {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50px, -42%);
+		left: -50%;
+		width: 100%;
+		height: 85%;
+		background: #0d1d26;
+		z-index: 40;
+	}
+
 	.home-card {
 		.background-image {
 			height: 50%;

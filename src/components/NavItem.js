@@ -12,11 +12,32 @@ export default function NavItem({ href, icon }) {
 
 	const click = (e) => {
 		e.preventDefault();
-		dispatch(setCurrentLinkAction(href));
 
+		const infoCards = document.getElementById('info-cards');
+		const cards = ['about', 'services', 'skills', 'works', 'contact'];
 		const dataTarget = document.getElementById(href);
 
-		SmoothScrolling(dataTarget);
+		if (window.innerWidth < 870) {
+			dispatch(setCurrentLinkAction(href));
+			SmoothScrolling(dataTarget);
+		} else if (!infoCards.classList.contains('animate')) {
+			dispatch(setCurrentLinkAction(href));
+			infoCards.classList.add('animate');
+
+			setTimeout(() => {
+				cards.forEach((card) => {
+					if (card !== href) {
+						document.getElementById(card).classList.remove('active');
+					} else {
+						document.getElementById(card).classList.add('active');
+					}
+				});
+			}, 1000);
+
+			setTimeout(() => {
+				document.getElementById('info-cards').classList.remove('animate');
+			}, 2000);
+		}
 	};
 
 	return (

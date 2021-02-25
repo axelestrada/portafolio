@@ -4,15 +4,24 @@ import Card from './Card';
 
 export default function AboutCard() {
 	return (
-		<Card cardId="about">
+		<Card cardId="about" otherClasses="active">
 			<CardContent title="About Me">
 				<div className="content relative">
 					<div className="pt-5 pb-5 font-medium">
-						<p className="">
+						<p>
 							I am Axel Estrada, web developer from Tegucigalpa, Honduras and currently i am studying computer
-							engineering. I have experience in development of websites an web applications using frameworks like React,
-							Vue and Angular. also i am good in Node.js, PHP and MySql. I would love to talk if you have any project in
-							mind.
+							engineering. I have experience in development of websites and web applications using technologies like
+							React, Vue and Angular. also i am good in Node.js, PHP and MySql. I would love to talk if you have any
+							project in mind.
+						</p>
+						<p className="hidden md:block">
+							<br />I am constantly learning new technologies that allow me to increase my efficiency and speed when
+							developing a project, large or small.
+						</p>
+						<p className="hidden md:block">
+							<br />
+							Recently I have been studying frontend technologies like Angular, Vue and React and now I want to
+							specialize more in the backend technologies like NodeJs, Python and MongoDB
 						</p>
 					</div>
 
