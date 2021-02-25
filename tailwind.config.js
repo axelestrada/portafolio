@@ -28,10 +28,27 @@ module.exports = {
 		},
 		screens: {
 			sm: '512px',
-			md: '720px',
-			lg: '1280px',
+			md: '870px',
+			lg: '1050px',
 		},
-		extend: {},
+		extend: {
+			width: {
+				90: '22.5rem',
+				98: '30rem',
+				99: '36.5rem',
+				100: '66.375rem',
+				almostFull: '97%',
+			},
+			maxWidth: {
+				md2: '30rem',
+			},
+			height: {
+				97: '30rem',
+				98: '32.5rem',
+				100: '36rem',
+				99: '37.5rem',
+			}
+		},
 	},
 	variants: {
 		extend: {},

@@ -1,6 +1,21 @@
 /*
 	1. General
 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0d1d26;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a171f;
+  border-radius: 4px;
+}
+
 body {
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
   font-size: 14px;
@@ -12,7 +27,6 @@ body {
 }
 
 div[class*='-card'] {
-  width: 97%;
   border-radius: 0.25rem;
   background: #051118;
   -webkit-box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
@@ -117,7 +131,7 @@ div[class*='-card'] .card-content .content::before {
 */
 .navbar {
   z-index: 900;
-  width: 97%;
+  width: calc(100% - 12px);
   -webkit-transform: translateX(calc(-50% - 6px));
           transform: translateX(calc(-50% - 6px));
   -webkit-box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840;
@@ -307,6 +321,31 @@ div[class*='-card'] .card-content .content::before {
   }
   .contact-card .card-content .form-input:nth-child(2n + 1) {
     padding-right: 4px;
+  }
+}
+
+@media (min-width: 870px) {
+  div[class*='-card'] {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .info {
+    -webkit-box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840 !important;
+            box-shadow: 5px 5px 15px #05111880, -5px -5px 15px #05111840 !important;
+  }
+}
+
+@media (min-width: 1050px) {
+  .home-card .background-image {
+    height: 50%;
+  }
+  .home-card .background-image img {
+    -webkit-clip-path: polygon(100% 0, 100% 85%, 60% 100%, 0 75%, 0 0);
+            clip-path: polygon(100% 0, 100% 85%, 60% 100%, 0 75%, 0 0);
+  }
+  .home-card .profile-image {
+    top: 50%;
+    --tw-translate-y: -50%;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -15,6 +15,7 @@ export default function NavItem({ href, icon }) {
 		dispatch(setCurrentLinkAction(href));
 
 		const dataTarget = document.getElementById(href);
+
 		SmoothScrolling(dataTarget);
 	};
 

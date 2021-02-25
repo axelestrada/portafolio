@@ -1,14 +1,15 @@
 import React from 'react';
 import CardContent from './CardContent';
+import Card from './Card';
 
 export default function ContactCard() {
 	return (
-		<div className="contact-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="contact">
+		<Card cardId="contact">
 			<CardContent title="Get in Touch">
 				<div className="content relative">
 					<div className="map pt-5 pb-3">
 						<iframe
-							className="w-full h-48 sm:h-56"
+							className="w-full h-48 sm:h-56 lg:h-60"
 							title="map"
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1986.6107009450134!2d-87.18397834195653!3d14.22576759747105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDEzJzMyLjgiTiA4N8KwMTAnNTguNCJX!5e1!3m2!1sen!2shn!4v1613948105668!5m2!1sen!2shn"
 							style={{ border: 0 }}
@@ -45,7 +46,7 @@ export default function ContactCard() {
 					</div>
 				</div>
 			</CardContent>
-		</div>
+		</Card>
 	);
 }
 

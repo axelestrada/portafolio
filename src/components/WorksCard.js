@@ -1,9 +1,10 @@
 import React from 'react';
 import CardContent from './CardContent';
+import Card from './Card';
 
 export default function WorksCard() {
 	return (
-		<div className="works-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="works">
+		<Card cardId="works">
 			<CardContent title="Works">
 				<div className="content relative">
 					<div className="works flex flex-wrap">
@@ -63,7 +64,7 @@ export default function WorksCard() {
 					</div>
 				</div>
 			</CardContent>
-		</div>
+		</Card>
 	);
 }
 

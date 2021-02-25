@@ -1,9 +1,10 @@
 import React from 'react';
 import CardContent from './CardContent';
+import Card from './Card';
 
 export default function AboutCard() {
 	return (
-		<div className="about-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="about">
+		<Card cardId="about">
 			<CardContent title="About Me">
 				<div className="content relative">
 					<div className="pt-5 pb-5 font-medium">
@@ -30,7 +31,7 @@ export default function AboutCard() {
 					</div>
 				</div>
 			</CardContent>
-		</div>
+		</Card>
 	);
 }
 

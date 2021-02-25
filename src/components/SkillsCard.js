@@ -1,12 +1,13 @@
 import React from 'react';
 import CardContent from './CardContent';
+import Card from './Card';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faServer } from '@fortawesome/free-solid-svg-icons';
 
 export default function SkillsCard() {
 	return (
-		<div className="skills-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="skills">
+		<Card cardId="skills">
 			<CardContent title="My Skills">
 				<div className="skills flex flex-wrap items-start">
 					<div className="content relative w-full sm:w-1/2 sm:pr-3">
@@ -43,7 +44,7 @@ export default function SkillsCard() {
 					</div>
 				</div>
 			</CardContent>
-		</div>
+		</Card>
 	);
 }
 

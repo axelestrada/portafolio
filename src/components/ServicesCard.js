@@ -1,12 +1,14 @@
 import React from 'react';
 import CardContent from './CardContent';
+import Card from './Card';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faMobileAlt, faHeadset } from '@fortawesome/free-solid-svg-icons';
 import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
 
 export default function ServicesCard() {
 	return (
-		<div className="services-card m-1.5 mt-2.5 p-7 overflow-hidden max-w-xl" id="services">
+		<Card cardId="services">
 			<CardContent title="Services">
 				<div className="content relative">
 					<div className="flex flex-wrap items-start">
@@ -31,7 +33,7 @@ export default function ServicesCard() {
 					</div>
 				</div>
 			</CardContent>
-		</div>
+		</Card>
 	);
 }
 

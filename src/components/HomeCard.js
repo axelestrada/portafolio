@@ -9,7 +9,7 @@ import SmoothScrolling from './SmoothScrolling';
 
 export default function HomeCard() {
 	return (
-		<div className="home-card m-1.5 mt-24 relative max-w-xl text-center flex justify-end items-center flex-col">
+		<div className="home-card m-1.5 mt-24 md:mt-1.5 relative max-w-2xl md:w-5/12 md:z-50 lg:max-w-md2 lg:w-98 lg:h-99 text-center flex justify-end items-center flex-col">
 			<div className="background-image absolute rounded overflow-hidden top-0 left-0 w-full">
 				<img
 					className="w-full h-full object-cover"
@@ -42,7 +42,7 @@ export default function HomeCard() {
 				<SocialNetworkItem href="https://stackoverflow.com/" icon={faStackOverflow} />
 			</div>
 
-			<div className="links w-full relative mt-5 flex justify-center">
+			<div className="links w-full relative mt-5 lg:mt-7 flex justify-center">
 				<DownButton href="#download" text="Download CV">
 					<FontAwesomeIcon className="ml-2 text-sm" icon={faDownload} />
 				</DownButton>
