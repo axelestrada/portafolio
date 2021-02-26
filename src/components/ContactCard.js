@@ -63,6 +63,7 @@ function FormInput({ name, placeholder, type }) {
 	return (
 		<div className="form-input w-full pt-8 sm:w-1/2">
 			<input
+				autoComplete="off"
 				className="w-full bg-backgroundMain border-b border-white66 text-white85 outline-none text-usm pb-5 focus:border-greenMain hover:border-greenMain"
 				type={type}
 				name={name}

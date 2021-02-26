@@ -20,7 +20,7 @@ export default function NavItem({ href, icon }) {
 		if (window.innerWidth < 870) {
 			dispatch(setCurrentLinkAction(href));
 			SmoothScrolling(dataTarget);
-		} else if (!infoCards.classList.contains('animate')) {
+		} else if (!infoCards.classList.contains('animate') && href !== currentLink) {
 			dispatch(setCurrentLinkAction(href));
 			infoCards.classList.add('animate');
 
@@ -30,6 +30,7 @@ export default function NavItem({ href, icon }) {
 						document.getElementById(card).classList.remove('active');
 					} else {
 						document.getElementById(card).classList.add('active');
+						document.getElementById(card).scrollTo(0, 0);
 					}
 				});
 			}, 1000);

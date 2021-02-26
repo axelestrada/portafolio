@@ -1,6 +1,5 @@
 import React from 'react';
-import profile from '../images/profile.png';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentLinkAction } from '../redux/NavbarDuck';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,17 +14,17 @@ export default function HomeCard() {
 			<div className="home-card m-1.5 mt-24 md:mt-1.5 relative max-w-2xl md:w-5/12 md:z-50 lg:max-w-md2 lg:w-98 lg:h-99 text-center flex justify-end items-center flex-col">
 				<div className="background-image absolute rounded overflow-hidden top-0 left-0 w-full">
 					<img
-						className="w-full h-full object-cover"
-						src="https://myresume.icu/ryancv/images/bg.jpg"
-						alt="Axel Estrada"
+						className="w-full h-full object-cover object-center"
+						src="https://nekomedia.com/sliders/images/web-developer/web-development-neko.jpg"
+						alt="Web Development Neko"
 					/>
 				</div>
 
-				<div className="profile-image absolute left-1/2 transform -translate-x-1/2 rounded-full">
+				<div className="profile-image w-40 h-40 absolute left-1/2 transform -translate-x-1/2">
 					<img
-						className="rounded-full w-full h-full border-backgroundMain border-4 relative"
-						src={profile}
-						alt="Axel Estrada"
+						className="w-full border-backgroundMain border-4 h-full rounded-full relative object-cover"
+						src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/119461058_764655414317776_7676399625223353836_o.jpg?_nc_cat=103&ccb=3&_nc_sid=174925&_nc_eui2=AeGdja-u8eUSoIw2N9TIujN9jeQ16lbXPnKN5DXqVtc-ch8whrhQGvfMTLCuMReXQxo4eowzXNay6IpsSvKsz_4Q&_nc_ohc=nK8g4gMR2CsAX91YgLO&_nc_ht=scontent-mia3-2.xx&oh=fe4a00e142372aeada6b4238b3133e52&oe=605E6F0C"
+						alt="Axel Estrada - Web Developer"
 					/>
 				</div>
 
@@ -38,15 +37,15 @@ export default function HomeCard() {
 				</div>
 
 				<div className="social">
-					<SocialNetworkItem href="https://facebook.com/" icon={faFacebookF} />
-					<SocialNetworkItem href="https://twitter.com/" icon={faTwitter} />
-					<SocialNetworkItem href="https://github.com/" icon={faGithub} />
-					<SocialNetworkItem href="https://linkedin.com/" icon={faLinkedinIn} />
-					<SocialNetworkItem href="https://stackoverflow.com/" icon={faStackOverflow} />
+					<SocialNetworkItem href="https://facebook.com/axelestrada1524" icon={faFacebookF} />
+					<SocialNetworkItem href="https://twitter.com/axelestrada1524" icon={faTwitter} />
+					<SocialNetworkItem href="https://github.com/axelestrada" icon={faGithub} />
+					<SocialNetworkItem href="https://linkedin.com/in/axelestrada1524" icon={faLinkedinIn} />
+					<SocialNetworkItem href="https://stackoverflow.com/users/12783566/axel-estrada" icon={faStackOverflow} />
 				</div>
 
 				<div className="links w-full relative mt-5 lg:mt-7 flex justify-center">
-					<DownButton href="#download" text="Download CV">
+					<DownButton href="download" text="Download CV">
 						<FontAwesomeIcon className="ml-2 text-sm" icon={faDownload} />
 					</DownButton>
 
@@ -62,6 +61,7 @@ export default function HomeCard() {
 
 function DownButton({ children, text, href }) {
 	const dispatch = useDispatch();
+	const currentLink = useSelector((store) => store.currentLink);
 
 	const click = (e) => {
 		e.preventDefault();
@@ -70,10 +70,11 @@ function DownButton({ children, text, href }) {
 		const cards = ['about', 'services', 'skills', 'works', 'contact'];
 		const dataTarget = document.getElementById(href);
 
-		if (window.innerWidth < 870) {
+		if(href !== "download"){
+			if (window.innerWidth < 870) {
 			dispatch(setCurrentLinkAction(href));
 			SmoothScrolling(dataTarget);
-		} else if (!infoCards.classList.contains('animate')) {
+		} else if (!infoCards.classList.contains('animate') && href !== currentLink) {
 			dispatch(setCurrentLinkAction(href));
 			infoCards.classList.add('animate');
 
@@ -83,6 +84,7 @@ function DownButton({ children, text, href }) {
 						document.getElementById(card).classList.remove('active');
 					} else {
 						document.getElementById(card).classList.add('active');
+						document.getElementById(card).scrollTo(0, 0);
 					}
 				});
 			}, 1000);
@@ -91,6 +93,8 @@ function DownButton({ children, text, href }) {
 				document.getElementById('info-cards').classList.remove('animate');
 			}, 2000);
 		}
+		}
+
 	};
 
 	return (
@@ -104,7 +108,7 @@ function DownButton({ children, text, href }) {
 function SocialNetworkItem({ href, icon }) {
 	return (
 		<a
-			className="inline-block w-4 h-4 mr-1.5 ml-1.5 hover:text-white85"
+			className="inline-block w-4 h-4 mr-2 ml-2 hover:text-white85"
 			href={href}
 			target="_blank"
 			rel="noopener noreferrer"

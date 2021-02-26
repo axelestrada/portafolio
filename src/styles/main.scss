@@ -1,4 +1,17 @@
 /*
+	Contents
+	1. General
+	2. Preloader
+	3. Navbar
+	4. Home Card
+	5. Services
+	6. Skills
+	7. Contact
+	8. Animations
+	9. Responsive
+*/
+
+/*
 	1. General
 */
 
@@ -98,7 +111,7 @@ div[class*='-card'] {
 }
 
 /*
-	1. Preloader
+	2. Preloader
 */
 
 .preloader {
@@ -128,7 +141,7 @@ div[class*='-card'] {
 }
 
 /*
-    2. Navbar
+    3. Navbar
 */
 
 .navbar {
@@ -147,7 +160,7 @@ div[class*='-card'] {
 }
 
 /*
-	3. Home Card
+	4. Home Card
 */
 
 .home-card {
@@ -158,14 +171,13 @@ div[class*='-card'] {
 
 		img {
 			clip-path: polygon(100% 0, 100% 85%, 60% 100%, 0 75%, 0 0);
+			object-position: 20% 50%;
 		}
 	}
 
 	.profile-image {
 		top: 45%;
 		--tw-translate-y: -45%;
-		width: 125px;
-		height: 125px;
 
 		&::before {
 			content: '';
@@ -176,7 +188,7 @@ div[class*='-card'] {
 			height: 100%;
 			border-radius: 50%;
 			background: linear-gradient(135deg, #18e77c66, #18e77c1a);
-		}
+		}		
 	}
 
 	.name {
@@ -228,7 +240,7 @@ div[class*='-card'] {
 }
 
 /*
-	Services Card
+	5. Services
 */
 
 .services-card {
@@ -253,7 +265,7 @@ div[class*='-card'] {
 }
 
 /*
-	Skills
+	6. Skills
 */
 
 .skills-card {
@@ -267,7 +279,7 @@ div[class*='-card'] {
 }
 
 /*
-	Contact Card
+	7. Contact
 */
 
 .contact-card {
@@ -281,7 +293,7 @@ div[class*='-card'] {
 }
 
 /*
-	*. Animations
+	8. Animations
 */
 
 @keyframes sk-bounce {
@@ -305,6 +317,10 @@ div[class*='-card'] {
 		transform: translateX(-100%) translateY(-50%);
 	}
 }
+
+/*
+	9. Responsive
+*/
 
 @media (min-width: 512px) {
 	.services-card {
