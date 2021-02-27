@@ -45,10 +45,16 @@ export default function HomeCard() {
 				</div>
 
 				<div className="links w-full relative mt-5 lg:mt-7 flex justify-center">
-					<DownButton href="download" text="Download CV">
+					<a
+						className="w-1/2 transition text-xs font-medium uppercase text-white85"
+						href="https://live.staticflickr.com/65535/50984197411_9f20524dd8_o.png"
+						target="_blank"
+						rel="noopener noreferrer"
+						download
+					>
+						<span>Download CV</span>
 						<FontAwesomeIcon className="ml-2 text-sm" icon={faDownload} />
-					</DownButton>
-
+					</a>
 					<DownButton href="contact" text="Contact Me">
 						<span className="modern-arrow ml-2"></span>
 					</DownButton>
@@ -70,8 +76,7 @@ function DownButton({ children, text, href }) {
 		const cards = ['about', 'services', 'skills', 'works', 'contact'];
 		const dataTarget = document.getElementById(href);
 
-		if(href !== "download"){
-			if (window.innerWidth < 870) {
+		if (window.innerWidth < 870) {
 			dispatch(setCurrentLinkAction(href));
 			SmoothScrolling(dataTarget);
 		} else if (!infoCards.classList.contains('animate') && href !== currentLink) {
@@ -93,8 +98,6 @@ function DownButton({ children, text, href }) {
 				document.getElementById('info-cards').classList.remove('animate');
 			}, 2000);
 		}
-		}
-
 	};
 
 	return (

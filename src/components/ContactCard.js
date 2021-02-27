@@ -18,12 +18,12 @@ export default function ContactCard() {
 					</div>
 					<div className="info">
 						<ul className="flex flex-wrap">
-							<div className="w-full sm:w-1/2 pr-1">
+							<div className="w-full sm:w-1/2 sm:pr-1">
 								<InfoItem title="Address" value="Tegucigalpa, Honduras" />
 								<InfoItem title="Email" value="axele1524@gmail.com" />
 							</div>
 
-							<div className="w-full sm:w-1/2 pl-1">
+							<div className="w-full sm:w-1/2 sm:pl-1">
 								<InfoItem title="Phone" value="+504 8897-9728" />
 								<InfoItem title="Freelance" value="Available" />
 							</div>
