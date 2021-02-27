@@ -72,7 +72,7 @@ function Work({ name, category, image, imageAlt }) {
 	return (
 		<div className="pb-5 sm:pb-0 pt-5 text-center text-usm uppercase text-white85 font-medium">
 			<div className="image">
-				<img src={image} alt={imageAlt} />
+				<img loading="lazy" src={image} alt={imageAlt} />
 			</div>
 			<div className="description pt-3">
 				<h4>{name}</h4>

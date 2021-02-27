@@ -1,17 +1,17 @@
 import React from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentLinkAction } from '../redux/NavbarDuck';
+import { setIsScrollingAction } from '../redux/IsScrollingDuck';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
-import SmoothScrolling from './SmoothScrolling';
-
 export default function HomeCard() {
 	return (
 		<>
-			<div className="home-card m-1.5 mt-24 md:mt-1.5 relative max-w-2xl md:w-5/12 md:z-50 lg:max-w-md2 lg:w-98 lg:h-99 text-center flex justify-end items-center flex-col">
+			<div className="home-card m-1.5 mt-24 min-h-50 md:mt-1.5 relative max-w-2xl md:w-5/12 md:z-50 lg:max-w-md2 lg:w-98 lg:h-99 text-center flex justify-end items-center flex-col">
 				<div className="background-image absolute rounded overflow-hidden top-0 left-0 w-full">
 					<img
 						className="w-full h-full object-cover object-center"
@@ -67,7 +67,7 @@ export default function HomeCard() {
 
 function DownButton({ children, text, href }) {
 	const dispatch = useDispatch();
-	const currentLink = useSelector((store) => store.currentLink);
+	const store = useSelector((store) => store);
 
 	const click = (e) => {
 		e.preventDefault();
@@ -77,9 +77,36 @@ function DownButton({ children, text, href }) {
 		const dataTarget = document.getElementById(href);
 
 		if (window.innerWidth < 870) {
-			dispatch(setCurrentLinkAction(href));
-			SmoothScrolling(dataTarget);
-		} else if (!infoCards.classList.contains('animate') && href !== currentLink) {
+			if (store.isScrolling === false) {
+				dispatch(setIsScrollingAction(true));
+				dispatch(setCurrentLinkAction(href));
+
+				if (dataTarget) {
+					const startLocation = window.pageYOffset;
+					const endLocation = dataTarget.offsetTop - 90;
+					const distance = endLocation - startLocation;
+
+					const duration = (Math.abs(distance) / 100) * 10;
+					const increments = distance / duration;
+
+					let runAnimation = setInterval(() => {
+						if (distance >= 0) {
+							if (window.pageYOffset >= dataTarget.offsetTop - 90) {
+								dispatch(setIsScrollingAction(false));
+								clearInterval(runAnimation);
+							}
+						} else {
+							if (window.pageYOffset <= dataTarget.offsetTop - 90) {
+								dispatch(setIsScrollingAction(false));
+								clearInterval(runAnimation);
+							}
+						}
+
+						window.scrollBy(0, increments);
+					}, 1);
+				}
+			}
+		} else if (!infoCards.classList.contains('animate') && href !== store.currentLink) {
 			dispatch(setCurrentLinkAction(href));
 			infoCards.classList.add('animate');
 
@@ -96,6 +123,7 @@ function DownButton({ children, text, href }) {
 
 			setTimeout(() => {
 				document.getElementById('info-cards').classList.remove('animate');
+				dispatch(setIsScrollingAction(false));
 			}, 2000);
 		}
 	};

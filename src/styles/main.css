@@ -160,10 +160,6 @@ div[class*='-card'] .card-content .content::before {
 /*
 	4. Home Card
 */
-.home-card {
-  height: 500px;
-}
-
 .home-card .background-image {
   height: 45%;
 }
